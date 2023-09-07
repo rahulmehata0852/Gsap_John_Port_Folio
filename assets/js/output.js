@@ -20,11 +20,16 @@ display(backEndSkills, be)
 
 function display(arr, el) {
     for (const item of arr) {
-        el.innerHTML += `<div class="progress-bar">
-        <div class="progress" style="width:${item.percent}%">${item.name}</div>
-    </div>`
+        el.innerHTML += `<div>
+        <div class="progress-bar">
+        <div class="progress" style="width:${item.percent}%;">${item.name}</div>
+    </div>
+    </div>
+    `
     }
 }
+
+
 
 gsap.registerPlugin(ScrollTrigger)
 gsap.from(".progress", { width: 0, stagger: 0.2, scrollTrigger: ".progress" })
